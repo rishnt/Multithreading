@@ -1,6 +1,10 @@
 public class Producer implements Runnable{
+    SharedResource sharedResource;
+    Producer(SharedResource sharedResource){
+        this.sharedResource = sharedResource;
+    }
     @Override
     public void run() {
-        System.out.println("Producer is running ...");
+      sharedResource.produceItem();
     }
 }

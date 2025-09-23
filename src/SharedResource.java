@@ -1,7 +1,11 @@
 public class SharedResource {
 
-    private Producer producer;
-   private Consumer consumer;
+   public synchronized void produceItem(){
 
+    }
+
+    public synchronized void consumeItem(){
+
+    }
 
 }

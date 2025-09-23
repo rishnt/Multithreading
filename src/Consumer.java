@@ -1,6 +1,12 @@
 public class Consumer implements Runnable{
+
+    SharedResource sharedResource;
+
+    Consumer(SharedResource sharedResource){
+        this.sharedResource = sharedResource;
+    }
     @Override
     public void run() {
-        System.out.println("Consumer is running ...");
+        sharedResource.consumeItem();
     }
 }
