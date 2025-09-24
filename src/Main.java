@@ -6,7 +6,12 @@ public class Main {
         Thread producerThread = new Thread(new Producer(resource));
         Thread consumerThread = new Thread(new Consumer(resource));
 
-        producerThread.start();
-        consumerThread.start();
+        for(int i=0;i<5;i++) {
+            producerThread.start();
+            consumerThread.start();
+
+            producerThread.join();
+            consumerThread.join();
+        }
     }
 }
