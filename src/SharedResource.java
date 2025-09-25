@@ -15,6 +15,7 @@ public class SharedResource {
               available = true;
               System.out.println("Produced an item");
               notify();
+              // notify that an item is produced
        }
    }
 
@@ -33,6 +34,7 @@ public class SharedResource {
             available = false;
             System.out.println("Consumed an item");
             notify();
+            // notify that an item is consumed
         }
     }
 
