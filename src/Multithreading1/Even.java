@@ -8,6 +8,15 @@ public class Even implements Runnable{
     }
     @Override
     public void run() {
-        res.printEven();
+        try{
+            while(true) {
+                res.printEven();
+                if (res.number > 10) break;
+            }
+        }
+        catch(InterruptedException e){
+            e.printStackTrace();
+        }
+
     }
 }

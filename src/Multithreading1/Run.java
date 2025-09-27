@@ -6,8 +6,9 @@ public class Run {
 resource res = new resource();
 Thread evenThread = new Thread(new Even(res));
 Thread oddThread = new Thread(new Odd(res));
-
 evenThread.start();
 oddThread.start();
+evenThread.join();
+oddThread.join();
     }
 }
